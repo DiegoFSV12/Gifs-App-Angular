@@ -49,7 +49,7 @@ export class GifsService{
         //Se definen los parametros a enviar (los parametros que se suelen enviar asi ...?api_key=---)
         const params = new HttpParams()
         .set('api_key',this.GIPHY_API_KEY)
-        .set('limit','10')
+        .set('limit','50')
         .set('q',tag)
 
         //Se hace la consulta http a la ruta /search y se envian los parametros, tambien se pueden enviar header y otros elementos
