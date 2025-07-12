@@ -9,4 +9,15 @@ import { Gif } from '../../interfaces/gifs.interfaces';
 export class CardListComponent {
   @Input()
   public gifs: Gif[]=[];
+
+  public selectedGif!:Gif;
+  public showModal:boolean=false;
+
+  openModal(gif:Gif):void{
+    this.showModal=true;
+    this.selectedGif = gif;
+  }
+  closeModal():void{
+    this.showModal=false;
+  }
 }

@@ -2,5 +2,10 @@
     <gifs-card
         *ngFor="let gif of gifs"
         [gif]="gif"
-        class="col-md-3 col-sm6"></gifs-card>
+        class="col-md-3 col-sm6"
+        (click)="openModal(gif)"></gifs-card>
 </div>
+<shared-modal
+    *ngIf="showModal" 
+    [gif]="selectedGif"
+    (click)="closeModal()"></shared-modal>
